@@ -1,0 +1,94 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "res/xml/config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"BackgroundServicePlugin\"><param name=\"android-package\" value=\"com.red_folder.phonegap.plugin.backgroundservice.BackgroundServicePlugin\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Sharedpreferences\"><param name=\"android-package\" value=\"in.edelworks.sharedpreferences.Sharedpreferences\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "AndroidManifest.xml": {
+                "parents": {
+                    "/manifest": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.RECEIVE_BOOT_COMPLETED\" />",
+                            "count": 1
+                        }
+                    ],
+                    "/manifest/application": [
+                        {
+                            "xml": "<receiver android:name=\"com.red_folder.phonegap.plugin.backgroundservice.BootReceiver\"><intent-filter><action android:name=\"android.intent.action.BOOT_COMPLETED\" /></intent-filter></receiver>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<service android:name=\"com.red_folder.phonegap.plugin.backgroundservice.sample.MyService\"><intent-filter><action android:name=\"com.red_folder.phonegap.plugin.backgroundservice.sample.MyService\" /></intent-filter></service>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "com.red_folder.phonegap.plugin.backgroundservice": {
+            "PACKAGE_NAME": "com.example.hello"
+        },
+        "com.red_folder.phonegap.plugin.backgroundservice.sample": {
+            "PACKAGE_NAME": "com.example.hello"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.example.hello"
+        },
+        "in.edelworks.sharedpreferences": {
+            "PACKAGE_NAME": "com.example.hello"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "file": "plugins/com.red_folder.phonegap.plugin.backgroundservice/www/backgroundService.js",
+            "id": "com.red_folder.phonegap.plugin.backgroundservice.BackgroundService"
+        },
+        {
+            "file": "plugins/com.red_folder.phonegap.plugin.backgroundservice.sample/www/myService.js",
+            "id": "com.red_folder.phonegap.plugin.backgroundservice.sample.MyService",
+            "clobbers": [
+                "cordova.plugins.myService"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-whitelist/whitelist.js",
+            "id": "cordova-plugin-whitelist.whitelist",
+            "runs": true
+        },
+        {
+            "file": "plugins/in.edelworks.sharedpreferences/www/sharedpreferences.js",
+            "id": "in.edelworks.sharedpreferences.SharedPreferences",
+            "clobbers": [
+                "sharedpreferences"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "com.red_folder.phonegap.plugin.backgroundservice": "2.0.0",
+        "com.red_folder.phonegap.plugin.backgroundservice.sample": "2.0.0",
+        "cordova-plugin-whitelist": "1.0.0",
+        "in.edelworks.sharedpreferences": "0.1.0"
+    }
+}

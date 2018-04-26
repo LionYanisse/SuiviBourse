@@ -1,0 +1,37 @@
+{
+    "cordova-plugin-whitelist": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-whitelist@1"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "com.red_folder.phonegap.plugin.backgroundservice.sample": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Red-Folder/bgs-sample.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "com.red_folder.phonegap.plugin.backgroundservice": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Red-Folder/bgs-core.git",
+            "subdir": "."
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "in.edelworks.sharedpreferences": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/edelworksgithub/SharedPreferences.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
+    }
+}

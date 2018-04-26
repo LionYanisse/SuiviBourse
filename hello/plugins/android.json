@@ -1,0 +1,25 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "com.red_folder.phonegap.plugin.backgroundservice.sample": {
+            "PACKAGE_NAME": "com.example.hello"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.example.hello"
+        },
+        "in.edelworks.sharedpreferences": {
+            "PACKAGE_NAME": "com.example.hello"
+        }
+    },
+    "dependent_plugins": {
+        "com.red_folder.phonegap.plugin.backgroundservice": {
+            "PACKAGE_NAME": "com.example.hello"
+        }
+    }
+}
